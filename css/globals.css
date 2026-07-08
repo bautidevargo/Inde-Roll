@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base styles */
+body {
+  @apply font-body-md;
+}
+
+/* Typography */
+.text-anton {
+  @apply font-display;
+}
+
+/* Utility classes */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+.blur-orb {
+  filter: blur(60px);
+  position: absolute;
+  z-index: -1;
+}
+
+.shadow-minimal {
+  box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.04);
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Image optimization */
+img {
+  @apply max-w-full h-auto;
+}
+
+/* Focus states for accessibility */
+a:focus-visible,
+button:focus-visible {
+  @apply outline-2 outline-offset-2 outline-primary;
+}
+
+/* Smooth transitions */
+* {
+  transition-duration: 300ms;
+}
+
+/* Responsive typography adjustments */
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+}
